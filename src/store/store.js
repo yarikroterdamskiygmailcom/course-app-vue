@@ -1,29 +1,13 @@
-/*=========================================================================================
-  File Name: store.js
-  Description: Vuex store
-  ----------------------------------------------------------------------------------------
-  Item Name: Vuesax Admin - VueJS Dashboard Admin Template
-  Author: Pixinvent
-  Author URL: http://www.themeforest.net/user/pixinvent
-==========================================================================================*/
+import Vue from 'vue';
+import Vuex from 'vuex';
+import { getters } from "./vuex/getters";
+import { mutations } from "./vuex/mutations";
+import { actions } from "./vuex/actions";
+import { state } from "./vuex/state";
 
-
-import Vue from 'vue'
-import Vuex from 'vuex'
-
-import state from "./state"
-import getters from "./getters"
-import mutations from "./mutations"
-import actions from "./actions"
-import orderModule from "./stockCaModule/module";
-
-Vue.use(Vuex)
-
+Vue.use(Vuex);
 
 export default new Vuex.Store({
-    modules:{
-        stockCaModule: orderModule
-    },
     getters,
     mutations,
     state,
